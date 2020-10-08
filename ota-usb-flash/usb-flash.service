@@ -1,0 +1,9 @@
+[Unit]
+Description=test python script
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/usb-reflash.py
+
+[Install]
+WantedBy=multi-user.target

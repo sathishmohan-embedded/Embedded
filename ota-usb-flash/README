@@ -1,0 +1,25 @@
+## OTA FLASH FOR ESP8266 BASED ARDUINO BOARDS ##
+
+usb-flash.service
+~~~~~~~~~~~~~~~~~
+* Run the usb-flash.py at that time of booting.
+* Copy this file to "/etc/systemd/system/"
+
+usb-flash.py
+~~~~~~~~~~~~
+* Used to monitor the USB Device's actions(Inserted/Removed) by UDev.
+* Execute usb-flash shell script, when usb is connecting to H/W.
+* Copy this file to "/usr/local/bin/"
+
+usb-flash.sh
+~~~~~~~~~~~~
+* Find the USB mounting point.
+* Scanning for Arduino OTA devices on the network &
+  Find it's IP Address.
+* Execute the espota python script with requird arguments(IPAddress, Password and Bin file).
+* Copy this file to "/usr/local/bin/"
+
+espota.py
+~~~~~~~~~
+* Python script to flash the Binary to Arduino Board with the help of Wifi module in OTA mode. 
+* Copy this file to "/usr/local/bin/"  
